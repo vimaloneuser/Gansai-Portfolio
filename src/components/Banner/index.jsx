@@ -33,8 +33,8 @@ const Banner = () => {
         <div
           className="sl-slide"
           data-orientation="horizontal"
-          data-slice1-rotation="3"
-          data-slice2-rotation="3"
+          data-slice1-rotation="6"
+          data-slice2-rotation="6"
           data-slice1-scale="2"
           data-slice2-scale="1"
         >
@@ -42,10 +42,38 @@ const Banner = () => {
             <div className="bg-img bg-img-3"></div>
           </div>
         </div>
+
+        <div
+          className="sl-slide"
+          data-orientation="horizontal"
+          data-slice1-rotation="3"
+          data-slice2-rotation="3"
+          data-slice1-scale="5"
+          data-slice2-scale="5"
+        >
+          <div className="sl-slide-inner">
+            <div className="bg-img bg-img-4"></div>
+          </div>
+        </div>
+        <div
+          className="sl-slide"
+          data-orientation="horizontal"
+          data-slice1-rotation="3"
+          data-slice2-rotation="3"
+          data-slice1-scale="5"
+          data-slice2-scale="5"
+        >
+          <div className="sl-slide-inner">
+            <div className="bg-img bg-img-5"></div>
+          </div>
+        </div>
+
       </div>
 
       <nav id="nav-dots" className="nav-dots">
         <span className="nav-dot-current"></span>
+        <span></span>
+        <span></span>
         <span></span>
         <span></span>
       </nav>

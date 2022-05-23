@@ -17,11 +17,11 @@ const Contact = () => {
 
                 <address>
                   <br />
-                  Ahmedabad
+                  4-Vishwkarma Nagar Vejalpur
                   <br />
-                  India 94107
+                  Ahmedabad -380051 Gujarat India
                   <br />
-                  <abbr title="Phone">P:</abbr> (123) 456-7890
+                  <abbr title="Phone">P:</abbr> +91 (873) 498-1174
                   <br />
                   <strong>info@gansaitiles.in</strong>
                 </address>

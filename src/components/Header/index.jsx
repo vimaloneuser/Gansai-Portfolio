@@ -26,8 +26,7 @@ const Header = () => {
             </button>
             <Link className="navbar-brand" to={"/"} href="#">
               <img
-                height={60}
-                width={80}
+                id="nav-logo"
                 src="assets/images/logo.png"
                 alt="logo"
               />
@@ -45,9 +44,9 @@ const Header = () => {
               <li className="scroll">
                 <a href="#our-team">Export</a>
               </li>
-              <li className="scroll">
+              {/* <li className="scroll">
                 <a href="#portfolio">Our Designs</a>
-              </li>
+              </li> */}
               <li className="scroll">
                 <a href="#our-products">Products</a>
               </li>

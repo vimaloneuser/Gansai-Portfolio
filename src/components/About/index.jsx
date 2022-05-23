@@ -20,22 +20,11 @@ const About = () => {
           </div>
 
           <div className="col-sm-6 wow fadeInRight">
-            <h3 className="column-title">Gansai Tiles</h3>
+            <h3 className="column-title">Welcome to Gansai Tiles</h3>
             <p>
-              Gansai Tiles is one of the largest exporter of Ceramic Wall tiles
-              and porcelain tiles in India. Our Manufacturing units are equipped
-              with modern technology for zero chance for human error. These
-              makes us different in the tiles industries. As we have highly
-              innovative and aggressive development team so we are achieving
-              target for quality and design for all countries in the world.
+            With a vision and intention to add glamour and charm to your world through our extensive range of tiles, we at Gansai Tiles International add value to your life. We deliver excellent quality of Digital Wall Tiles ,Ceramic Floor Tiles, Porcelain / GVT Tiles all across the world to bring luxury and beauty in the world if tiles. Being the largest tiles manufacturer and exporter at Gansai Tiles International we have the responsibility of maintaining the standards and delivering the top notch designs to suit your taste. With a team of creative designers and technicians we use the innovations and technology blended with designs that are creative, trendy and affordable. Having a reputation of being the established brand in Indian as well as International market we are the leading manufacturer and supplier of high quality high performing tiles.
             </p>
-            <p>
-              Gansai Tiles is very prestigious brand of tiles industries. So we
-              know the how to deliver Quality And Service and make Our Brand
-              BIGGER & BETTER.
-            </p>
-
-    
+         
           </div>
         </div>
       </div>
