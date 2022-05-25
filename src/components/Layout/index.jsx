@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <Footer />
       {/* Footer section */}
       <a
-        href="https://wa.me/918734981174?text=Hey ,We are available on whatsapp , feel free to connect."
+        href="https://wa.me/918734981174?text=Hi."
         className="float"
         rel="noreferrer"
         target="_blank"
