@@ -18,7 +18,7 @@ const WhatWeDid = () => {
           >
             <div
               className="business-stats"
-              data-digit="2"
+              data-digit="5"
               data-duration="1000"
             ></div>
             <strong>Year experience</strong>
@@ -32,7 +32,7 @@ const WhatWeDid = () => {
           >
             <div
               className="business-stats"
-              data-digit="5"
+              data-digit="20"
               data-duration="1000"
             ></div>
             <strong>Countries</strong>
@@ -46,10 +46,10 @@ const WhatWeDid = () => {
           >
             <div
               className="business-stats"
-              data-digit="400"
+              data-digit="100"
               data-duration="1000"
             ></div>
-            <strong>Happy Customers</strong>
+            <strong>Happy Clients</strong>
           </div>
         </div>
         <div className="col-md-3 col-sm-6 col-xs-12">
@@ -60,7 +60,7 @@ const WhatWeDid = () => {
           >
             <div
               className="business-stats"
-              data-digit="100"
+              data-digit="1000"
               data-duration="1000"
             ></div>
             <strong>Design</strong>

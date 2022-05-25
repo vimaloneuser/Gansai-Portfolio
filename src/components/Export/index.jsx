@@ -27,7 +27,7 @@ const Export = () => {
 
           <div className="row text-center">
             {exports.map((i, key) => (
-              <div key={key} className=" col-lg-2 col-md-2 col-sm-2 col-xs-4">
+              <div key={key} className=" col-lg-2 col-md-2 col-sm-2 col-xs-3">
                 <div
                   className="team-member wow fadeInUp"
                   data-wow-duration="400ms"
@@ -37,11 +37,25 @@ const Export = () => {
                     <img className="img-responsive" src={i.flag} alt="" />
                   </div>
                   <div className="team-info">
-                    <h3>{i.country}</h3>
+                    <h5>{i.country}</h5>
                   </div>
                 </div>
               </div>
             ))}
+            <div className=" col-lg-2 col-md-2 col-sm-2 col-xs-3">
+              <div
+                className="team-member wow fadeInUp"
+                data-wow-duration="400ms"
+                data-wow-delay="0ms"
+              >
+                <div className="team-img">
+                  <img className="img-responsive" src="assets/images/flags/more.png" alt="" />
+                </div>
+                <div className="team-info">
+                  <h5>& More.</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

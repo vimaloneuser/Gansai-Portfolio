@@ -19,6 +19,14 @@ const Layout = ({ children }) => {
       {/* Footer section */}
       <Footer />
       {/* Footer section */}
+      <a
+        href="https://wa.me/918734981174?text=Hey ,We are available on whatsapp , feel free to connect."
+        className="float"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <i className="fa fa-whatsapp my-float"></i>
+      </a>
     </React.Fragment>
   );
 };

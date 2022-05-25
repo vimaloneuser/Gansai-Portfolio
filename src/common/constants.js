@@ -232,6 +232,42 @@ const exports = [
         country: "South Africa",
         flag: "assets/images/flags/sa.png"
     },
+    {
+        country: "Canada",
+        flag: "assets/images/flags/canada.png"
+    },
+    {
+        country: "Australia",
+        flag: "assets/images/flags/aus.png"
+    },
+    {
+        country: "Netherland",
+        flag: "assets/images/flags/netherland.png"
+    },
+    {
+        country: "Turkey",
+        flag: "assets/images/flags/turkey.png"
+    },
+    {
+        country: "China",
+        flag: "assets/images/flags/china.png"
+    },
+    {
+        country: "Nepal",
+        flag: "assets/images/flags/nepal.png"
+    },
+    {
+        country: "Bangladesh",
+        flag: "assets/images/flags/bangla.png"
+    },
+    {
+        country: "UAE (Dubai)",
+        flag: "assets/images/flags/dubai.png"
+    },
+    {
+        country: "Saudi Arabia",
+        flag: "assets/images/flags/saudi.png"
+    },
 ]
 
 export { route, data, about, navMenu, exports };
