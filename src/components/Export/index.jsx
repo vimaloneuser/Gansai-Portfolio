@@ -3,20 +3,7 @@ import { exports } from "../../common/constants";
 const Export = () => {
   return (
     <>
-      <section id="hero-action-section" className="hero-action-section">
-        <div className="container ow-section">
-          <h4 className="hero-action-title">
-            Work with Best Tiles
-            <br />
-            Exporter
-          </h4>
-          <p>
-            <a href="#" className="get-started">
-              Get It Now!!
-            </a>
-          </p>
-        </div>
-      </section>
+     
 
       <section id="our-team">
         <div className="container">

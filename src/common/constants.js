@@ -1,9 +1,15 @@
 // Pages routes
 const route = {
     home: "/",
+    products: "/products",
+    editProduct: "/editProduct",
+    editCategory: "/editCategory",
     about: "/about",
-    experience: "/experience",
-    contact: "/contact"
+    export: "/export",
+    contact: "/contact",
+    category: "/category",
+    login: "/login",
+    packaging: "/packaging",
 }
 
 // Navigation menu
@@ -248,10 +254,10 @@ const exports = [
         country: "Turkey",
         flag: "assets/images/flags/turkey.png"
     },
-    {
-        country: "China",
-        flag: "assets/images/flags/china.png"
-    },
+    // {
+    //     country: "China",
+    //     flag: "assets/images/flags/china.png"
+    // },
     {
         country: "Nepal",
         flag: "assets/images/flags/nepal.png"
@@ -264,10 +270,10 @@ const exports = [
         country: "UAE (Dubai)",
         flag: "assets/images/flags/dubai.png"
     },
-    {
-        country: "Saudi Arabia",
-        flag: "assets/images/flags/saudi.png"
-    },
+    // {
+    //     country: "Saudi Arabia",
+    //     flag: "assets/images/flags/saudi.png"
+    // },
 ]
 
 export { route, data, about, navMenu, exports };

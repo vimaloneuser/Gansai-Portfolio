@@ -21,9 +21,11 @@ const Contact = () => {
                   <br />
                   Ahmedabad -380051 Gujarat India
                   <br />
-                  <abbr title="Phone">P:</abbr> +91 (873) 498-1174
+                  <abbr title="Phone"></abbr>
+                  +91 (873) 498-1174, +91 (816) 014-7875
                   <br />
-                  <strong>info@gansaitiles.in</strong>
+                  <strong>info@gansaitiles.in, </strong>
+                  <strong>gansaitiles@gmail.com</strong>
                 </address>
               </div>
             </div>
