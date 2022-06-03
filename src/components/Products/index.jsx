@@ -2,32 +2,31 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, onValue, ref } from "firebase/database";
 import { firebaseConfig } from "../../config/firebase";
 import { initializeApp } from "firebase/app";
-import { useParams } from "react-router-dom";
 
 const Products = () => {
   const [products, setProducts] = useState({ sizes: [], catelogs: [] });
-  const params = useParams();
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(
     app,
     "https://gansai-tiles-default-rtdb.asia-southeast1.firebasedatabase.app"
   );
-
+  const categoryId = localStorage.getItem("categoryId");
   useEffect(() => {
-    const starCountRef = ref(db, "products/" + params.categoryId);
+    const starCountRef = ref(db, "products/" + categoryId);
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       var sizes = [];
-      data?.catelogs.map((item) => {
-        if (!sizes.includes(item?.size)) sizes.push(item?.size);
-      });
-      setProducts({
-        ...data,
-        sizes,
-      });
+      if (data?.catelogs) {
+        data?.catelogs.map((item) => {
+          if (!sizes.includes(item?.size)) sizes.push(item?.size);
+        });
+        setProducts({
+          ...data,
+          sizes,
+        });
+      }
     });
   }, []);
-
 
   return (
     <React.Fragment>
@@ -65,12 +64,18 @@ const Products = () => {
                       padding: 60 / 4,
                       margin: 4,
                       color: "white",
-                     
                     }}
                   >
                     {/* <a href="#"> */}
                     <h4 className="media-heading">
-                      <a style={{color:"white"}} rel="noreferrer" href={item.url} target="_blank" >{item.name}</a>
+                      <a
+                        style={{ color: "white" }}
+                        rel="noreferrer"
+                        href={item.url}
+                        target="_blank"
+                      >
+                        {item.name}
+                      </a>
                     </h4>
                     {/* </a> */}
                   </div>

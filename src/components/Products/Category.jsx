@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, onValue, ref } from "firebase/database";
 import { firebaseConfig } from "../../config/firebase";
 import { initializeApp } from "firebase/app";
-import { Link } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { route } from "../../common/constants";
 
 const CategoryListing = () => {
   const [category, setCategory] = useState([]);
+  const navigate = useNavigate();
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(
     app,
@@ -17,10 +18,11 @@ const CategoryListing = () => {
     const starCountRef = ref(db, "products");
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
-      setCategory(data);
+      if (data) {
+        setCategory(data);
+      }
     });
   }, []);
-
 
   return (
     <section id="services">
@@ -39,7 +41,15 @@ const CategoryListing = () => {
                 data-wow-duration="300ms"
                 data-wow-delay="0ms"
               >
-                <Link to={`${route.products}/${index}`}>
+                <a
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  onClick={() => {
+                    localStorage.setItem("categoryId", item.id);
+                    navigate(route.products);
+                  }}
+                >
                   <div className="media service-box">
                     <div className="media-body">
                       <h4 className="media-heading">{item.name}</h4>
@@ -48,7 +58,7 @@ const CategoryListing = () => {
                       )}
                     </div>
                   </div>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

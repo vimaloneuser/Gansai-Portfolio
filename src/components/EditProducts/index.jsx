@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, onValue, ref, set, remove } from "firebase/database";
 import { firebaseConfig } from "../../config/firebase";
 import { initializeApp } from "firebase/app";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Modal from "react-modal";
 import toastr from "toastr";
 import { route } from "../../common/constants";
@@ -12,21 +12,20 @@ const EditProduct = () => {
   const [editModal, setEditModal] = useState(false);
   const [addModal, setAddModal] = useState(false);
   const [id, setId] = useState({ name: "", size: "", url: "", id: 0 });
-  const params = useParams();
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(
     app,
     "https://gansai-tiles-default-rtdb.asia-southeast1.firebasedatabase.app"
   );
-
+  const categoryId = localStorage.getItem("categoryId");
   const navigate = useNavigate();
 
   useEffect(() => {
     if (!localStorage.getItem("isLoggedIn")) {
       navigate(route.login);
     }
-
-    const starCountRef = ref(db, "products/" + params.categoryId);
+   
+    const starCountRef = ref(db, "products/" + categoryId);
     onValue(starCountRef, (snapshot) => {
       const data = snapshot.val();
       var sizes = [];
@@ -60,7 +59,7 @@ const EditProduct = () => {
       url = event.target.inputUrl.value,
       size = event.target.inputSize.value;
 
-    set(ref(db, `products/${params.categoryId}/catelogs/` + id.id), {
+    set(ref(db, `products/${categoryId}/catelogs/` + id.id), {
       id: id.id,
       size,
       name,
@@ -85,7 +84,7 @@ const EditProduct = () => {
     set(
       ref(
         db,
-        `products/${params.categoryId}/catelogs/${products.catelogs.length}`
+        `products/${categoryId}/catelogs/${products.catelogs.length}`
       ),
       {
         id: products.catelogs.length,
@@ -104,7 +103,7 @@ const EditProduct = () => {
       });
   };
   const deleteRow = (id) => {
-    remove(ref(db, `products/${params.categoryId}/catelogs/${id}`))
+    remove(ref(db, `products/${categoryId}/catelogs/${id}`))
       .then(() => {
         toastr.success("Removed successfully.");
         setAddModal(false);

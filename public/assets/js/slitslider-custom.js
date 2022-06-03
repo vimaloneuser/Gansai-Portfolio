@@ -21,7 +21,7 @@ $(function () {
 				let count = 1, len = $nav.length;
 
 				setInterval(() => {
-					slitslider.jump(count += 1);
+					slitslider?.jump(count += 1);
 					if (count === len) count = 0;
 				}, 3000);
 

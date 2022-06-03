@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getDatabase, onValue, ref, remove, set } from "firebase/database";
 import { firebaseConfig } from "../../config/firebase";
 import { initializeApp } from "firebase/app";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { route } from "../../common/constants";
 import toastr from "toastr";
 import Modal from "react-modal";
@@ -60,7 +60,6 @@ const EditCategoryListing = () => {
         toastr.error("Failed.");
       });
   };
-
 
   const customStyles = {
     content: {
@@ -195,9 +194,17 @@ const EditCategoryListing = () => {
                   >
                     <div className="media service-box  card">
                       <div className="media-body card">
-                        <Link to={`${route.editProduct}/${item.id}`}>
+                        <a
+                          style={{
+                            cursor: "pointer",
+                          }}
+                          onClick={() => {
+                            localStorage.setItem("categoryId", item.id);
+                            navigate(route.editProduct);
+                          }}
+                        >
                           <h4 className="media-heading">{item.name}</h4>
-                        </Link>
+                        </a>
                         <a
                           style={{ cursor: "pointer" }}
                           onClick={() => editRow(item)}
