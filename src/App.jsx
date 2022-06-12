@@ -6,6 +6,7 @@ import "toastr/build/toastr.min.css";
 import Layout from "./components/Layout";
 import { initializeApp } from "firebase/app";
 import { firebaseConfig } from "./config/firebase";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   const ScrollToTop = () => {
@@ -35,6 +36,7 @@ const App = () => {
             />
           ))}
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {/* </BrowserRouter> */}
     </React.Fragment>
