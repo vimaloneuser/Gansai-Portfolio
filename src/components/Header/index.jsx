@@ -52,9 +52,6 @@ const Header = () => {
                   <Link to={route.packaging}>Packing List</Link>
                 </li>
                 <li className="scroll">
-                  <Link to={route.quality}>Quality</Link>
-                </li>
-                <li className="scroll">
                   <a
                     href="https://drive.google.com/file/d/1f_BT4S6dJx-Y7R7H9b9mo_M0vPuozGJp/view?usp=sharing"
                     target="_blank"
@@ -83,9 +80,6 @@ const Header = () => {
                 </li>
                 <li className="scroll">
                   <Link to={route.packaging}>Packing List</Link>
-                </li>
-                <li className="scroll">
-                  <Link to={route.quality}>Quality</Link>
                 </li>
                 <li className="scroll">
                   <a
