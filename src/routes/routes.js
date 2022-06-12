@@ -9,18 +9,20 @@ import EditProduct from "../components/EditProducts";
 import Login from "../components/login";
 import EditCategoryListing from "../components/EditProducts/EditCategoryList";
 import PackingList from "../components/PackingList";
+import Quality from "../components/Quality";
 
 const routes = [
-  { path: "/", component: Dashboard },
-  { path: route.category, component: CategoryListing },
-  { path: route.about, component: About },
-  { path: route.export, component: Export },
-  { path: route.contact, component: Contact },
-  { path: route.products, component: Products },
-  { path: route.editProduct, component: EditProduct },
-  { path: route.editCategory, component: EditCategoryListing },
-  { path: route.packaging, component: PackingList },
-  { path: route.login, component: Login },
+  { index: true, path: "/", component: Dashboard },
+  { index: false, path: route.category, component: CategoryListing },
+  { index: false, path: route.about, component: About },
+  { index: false, path: route.export, component: Export },
+  { index: false, path: route.contact, component: Contact },
+  { index: false, path: route.products, component: Products },
+  { index: false, path: route.editProduct, component: EditProduct },
+  { index: false, path: route.editCategory, component: EditCategoryListing },
+  { index: false, path: route.packaging, component: PackingList },
+  { index: false, path: route.login, component: Login },
+  { index: false, path: route.quality, component: Quality },
 ];
 
 export default routes;

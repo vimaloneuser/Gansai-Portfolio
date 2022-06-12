@@ -23,13 +23,20 @@ const App = () => {
   return (
     <React.Fragment>
       <ScrollToTop />
+      {/* <BrowserRouter> */}
       <Routes>
-        {routes.map(({ path, component: Component }, index) => (
-          <Route key={index} element={<Layout />}>
-            <Route path={path} element={<Component />} />
-          </Route>
-        ))}
+        <Route path="/" element={<Layout />}>
+          {routes.map(({ path, component: Component }, index) => (
+            <Route
+              index={true}
+              key={index}
+              path={path}
+              element={<Component />}
+            />
+          ))}
+        </Route>
       </Routes>
+      {/* </BrowserRouter> */}
     </React.Fragment>
   );
 };

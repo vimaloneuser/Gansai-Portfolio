@@ -9,6 +9,7 @@ const route = {
     contact: "/contact",
     category: "/category",
     login: "/login",
+    quality: "/quality",
     packaging: "/packaging",
 }
 

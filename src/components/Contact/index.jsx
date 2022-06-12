@@ -1,6 +1,27 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = React.useRef();
+  const sendMail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_5q3bd8k",
+        "template_7rf42jm",
+        form.current,
+        "iJ9aNSliwQ57snZFA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section id="contact-us">
       <div className="container">
@@ -22,7 +43,7 @@ const Contact = () => {
                   Ahmedabad -380051 Gujarat India
                   <br />
                   <abbr title="Phone"></abbr>
-                  +91 (873) 498-1174, +91 (816) 014-7875
+                  +91 (816) 014-7875
                   <br />
                   <strong>info@gansaitiles.in, </strong>
                   <strong>gansaitiles@gmail.com</strong>
@@ -35,12 +56,13 @@ const Contact = () => {
                   id="main-contact-form"
                   name="contact-form"
                   method="post"
-                  action="#"
+                  ref={form}
+                  onSubmit={sendMail}
                 >
                   <div className="form-group">
                     <input
                       type="text"
-                      name="name"
+                      name="user_name"
                       className="form-control"
                       placeholder="Name"
                       required
@@ -49,18 +71,9 @@ const Contact = () => {
                   <div className="form-group">
                     <input
                       type="email"
-                      name="email"
+                      name="user_email"
                       className="form-control"
                       placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="subject"
-                      className="form-control"
-                      placeholder="Subject"
                       required
                     />
                   </div>
