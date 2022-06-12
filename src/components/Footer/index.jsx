@@ -10,7 +10,11 @@ const Footer = () => {
           <div className="col-sm-6">
             <ul className="social-icons">
               <li>
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/gansaitiles/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa fa-facebook"></i>
                 </a>
               </li>
